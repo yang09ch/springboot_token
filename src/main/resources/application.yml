@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: yang
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    auto-mapping-behavior: full
+
+
+
+logging:
+  level:
+    root: info
+    com.kgc.mapper: debug
+  config: classpath:lombok-spring.xml
