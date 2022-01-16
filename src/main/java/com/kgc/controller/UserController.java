@@ -77,7 +77,7 @@ public class UserController {
         //获取用户代理字符串
         String userAgent = request.getHeader("User-Agent");
         try {
-            String reload = reload = tokenService.reload(token, userAgent);
+            String reload = tokenService.reload(token, userAgent);
             TokenVo tokenVo=new TokenVo();
             tokenVo.setToken(reload);//
             tokenVo.setGenTime(System.currentTimeMillis());//毫秒   开始时间
